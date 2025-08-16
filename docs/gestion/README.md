@@ -1,8 +1,10 @@
+> **[Portal de Documentación](../README.md)** / 📊 Gestión del Proyecto
+
 # 📊 Gestión del Proyecto "UpSkill"
 
 Este documento es el punto de entrada a toda la información relacionada con la metodología, las herramientas y las convenciones que guían nuestro proceso de desarrollo.
 
-Nuestro objetivo es mantener un flujo de trabajo transparente, organizado y eficiente, utilizando las siguientes herramientas y documentos como pilares de nuestra gestión.
+Nuestro objetivo es mantener un flujo de trabajo transparente, organizado y eficiente, utilizando los siguientes herramientas y documentos como pilares de nuestra gestión.
 
 ---
 

@@ -1,3 +1,5 @@
+> **[Portal de Documentación](../../README.md)** / **[Gestión del Proyecto](../README.md)** / 📝 Minutas de Reunión
+
 # 📝 Minutas de Reunión
 
 Este directorio contiene el registro cronológico de todas las reuniones de sincronización del equipo "UpSkill". Cada archivo documenta las discusiones, decisiones y acciones resultantes de cada encuentro.

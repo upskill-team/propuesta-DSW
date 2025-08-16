@@ -1,3 +1,5 @@
+> **[Portal de Documentación](../README.md)** / 🏗️ Arquitectura de la Aplicación
+
 # 🏗️ Arquitectura de la Aplicación
 
 La arquitectura de **UpSkill** se fundamenta en un principio clave: el **desacoplamiento total entre el Frontend y el Backend**. Esta decisión estratégica nos permite desarrollar, probar y desplegar cada componente de forma independiente, garantizando la escalabilidad y facilitando el mantenimiento a largo plazo.
@@ -8,7 +10,7 @@ La arquitectura de **UpSkill** se fundamenta en un principio clave: el **desacop
 
 ## 📂 Estructura Multi-Repositorio
 
-Para materializar el principio de desacoplamiento, hemos adoptado un enfoque de **multi-repositorio**. Cada componente principal del proyecto vive en su propio espacio, lo que facilita la gestión del código fuente, los permisos y los flujos de trabajo de CI/CD específicos para cada uno.
+Para materializar el principio de desacoplamiento, hemos adoptado un enfoque de **multi-repositorio**. Cada componente principal del proyecto vive en su propio espacio, lo que facilita la gestión del código fuente y los flujos de trabajo específicos para cada uno.
 
 | Repositorio                    | Propósito                                                         |                               Enlace                               |
 | :----------------------------- | :---------------------------------------------------------------- | :----------------------------------------------------------------: |
@@ -20,7 +22,7 @@ Para materializar el principio de desacoplamiento, hemos adoptado un enfoque de 
 
 ## 🧬 Flujo de Datos y Componentes
 
-El siguiente diagrama ilustra la interacción de alto nivel entre los componentes de la aplicación, desde la interacción del usuario en el navegador hasta la persistencia de los datos en la base de datos.
+El siguiente diagrama ilustra la interacción de alto nivel entre los componentes de la aplicación, desde la interacción del usuario hasta la persistencia de los datos.
 
 ```mermaid
 graph TD;
@@ -62,8 +64,12 @@ graph TD;
 
 ---
 
-| Tecnología                                                                                                                                     | Justificación Principal                                                                                                                                                                                                                                                                                                                                                                         |
-| :--------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"> </p>      | <ul><li><strong>Vasto Ecosistema y Comunidad:</strong> Acceso a un inmenso conjunto de librerías y herramientas probadas que aceleran el desarrollo.</li><li><strong>Modelo de Componentes Declarativo:</strong> Permite construir una interfaz modular, reutilizable y fácil de mantener.</li></ul>                                                                                            |
-| <p align="center"> <img src="https://img.shields.io/badge/MikroORM-6B46C1?style=for-the-badge&logoColor=white" alt="MikroORM"> </p>            | <ul><li><strong>Arquitectura Robusta:</strong> Implementa los patrones <strong>Data Mapper</strong> y <strong>Unit of Work</strong>, resultando en un código más limpio y testeable.</li><li><strong>Integración Nativa con TypeScript:</strong> Ofrece un tipado fuerte de extremo a extremo.</li></ul>                                                                                        |
-| <p align="center"> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"> </p> | <ul><li><strong>Modelo de Datos Flexible:</strong> Su esquema de documentos permite anidar datos complejos y evolucionar la aplicación sin migraciones rígidas.</li><li><strong>Eficiencia Operativa:</strong> El uso de servicios como MongoDB Atlas reduce la carga de administración de la base de datos. Atlas también cuenta con una versión gratuita y de fácil implementación.</li></ul> |
+## 💡 Justificación del Stack Tecnológico
+
+La elección de cada tecnología fue deliberada para maximizar la productividad, robustez y escalabilidad del proyecto.
+
+| Tecnología                                                                                                                                     | Justificación Principal                                                                                                                                                                                                                                                                                                                                        |
+| :--------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"> </p>      | <ul><li><strong>Vasto Ecosistema y Comunidad:</strong> Acceso a un inmenso conjunto de librerías y herramientas probadas que aceleran el desarrollo.</li><li><strong>Modelo de Componentes Declarativo:</strong> Permite construir una interfaz modular, reutilizable y fácil de mantener.</li></ul>                                                           |
+| <p align="center"> <img src="https://img.shields.io/badge/MikroORM-6B46C1?style=for-the-badge&logoColor=white" alt="MikroORM"> </p>            | <ul><li><strong>Arquitectura Robusta:</strong> Implementa los patrones <strong>Data Mapper</strong> y <strong>Unit of Work</strong>, resultando en un código más limpio y testeable.</li><li><strong>Integración Nativa con TypeScript:</strong> Ofrece un tipado fuerte de extremo a extremo, siendo además la herramienta utilizada en la cátedra.</li></ul> |
+| <p align="center"> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"> </p> | <ul><li><strong>Modelo de Datos Flexible:</strong> Su esquema de documentos permite anidar datos complejos y evolucionar la aplicación sin migraciones rígidas.</li><li><strong>Eficiencia Operativa:</strong> El uso de servicios como MongoDB Atlas (con su generoso nivel gratuito) reduce la carga de administración de la base de datos.</li></ul>        |
