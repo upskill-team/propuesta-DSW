@@ -51,19 +51,17 @@ Se optó por un stack de **Node.js + Express.js con TypeScript** para el Backend
 **Justificación y Comparativa**
 
 > **Frameworks Backend**
->
-> | Criterio                 | **Express.js (✅ Elección)**                                                                                            | NestJS                                                              |
-> | :----------------------- | :---------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
-> | **Curva de Aprendizaje** | Baja. Es minimalista y flexible.                                                                                        | Media-Alta. Requiere aprender su arquitectura inspirada en Angular. |
-> | **Flexibilidad**         | Muy alta. No impone una estructura estricta.                                                                            | Baja. Es muy opinado, lo que guía hacia un patrón específico.       |
+> | Criterio | **![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) (✅ Elección)** | ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white) |
+> | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
+> | **Curva de Aprendizaje** | Baja. Es minimalista y flexible. | Media-Alta. Requiere aprender su arquitectura inspirada en Angular. |
+> | **Flexibilidad** | Muy alta. No impone una estructura estricta. | Baja. Es muy opinado, lo que guía hacia un patrón específico. |
 > | **Razón de la elección** | **Su flexibilidad permite construir la arquitectura en capas manualmente, comprendiendo mejor cada parte del proceso.** |
 
 > **Frameworks Frontend**
->
-> | Criterio                 | **React (✅ Elección)**                                                                                                         | Angular                                   | Vue                         |
+> | Criterio | **![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) (✅ Elección)** | ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) | ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D) |
 > | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------- | :-------------------------- |
-> | **Ecosistema**           | Enorme. Gran cantidad de librerías y soporte.                                                                                   | Grande. Soportado por Google.             | Creciente y muy activa.     |
-> | **Flexibilidad**         | Muy alta. Es una librería, no un framework completo.                                                                            | Baja. Es un framework opinado y completo. | Alta. Permite flexibilidad. |
+> | **Ecosistema** | Enorme. Gran cantidad de librerías y soporte. | Grande. Soportado por Google. | Creciente y muy activa. |
+> | **Flexibilidad** | Muy alta. Es una librería, no un framework completo. | Baja. Es un framework opinado y completo. | Alta. Permite flexibilidad. |
 > | **Razón de la elección** | **Su vasto ecosistema, flexibilidad y alta demanda en el mercado lo convierten en la opción más estratégica para el proyecto.** |
 
 ---

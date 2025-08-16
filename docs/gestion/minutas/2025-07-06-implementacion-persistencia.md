@@ -49,18 +49,17 @@ Se implementará **MikroORM** conectado a una instancia de **MongoDB Atlas**.
 **Justificación y Comparativa**
 
 > **ORM / ODM**
-> | Criterio | **MikroORM (✅ Elección)** | TypeORM | Prisma |
+> | Criterio | **![MikroORM](https://img.shields.io/badge/MikroORM-6F42C1?style=for-the-badge) (✅ Elección)** | ![TypeORM](https://img.shields.io/badge/TypeORM-E8373D?style=for-the-badge) | ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=prisma&logoColor=white) |
 > | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------- | :--------------------------- | :-------------------------------------- |
 > | **Enfoque** | Data Mapper. Fomenta el desacoplamiento. | Active Record / Data Mapper. | Generador de clientes de base de datos. |
 > | **Razón de la elección** | **Su enfoque en el patrón Data Mapper se alinea perfectamente con una arquitectura en capas, promoviendo un código más limpio.** |
 
 > **Bases de Datos**
->
-> | Criterio                 | **MongoDB (✅ Elección)**                                                                                                                                                                                                       | MySQL                                                     |
+> | Criterio | **![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) (✅ Elección)** | ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) |
 > | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------- |
-> | **Modelo de Datos**      | Orientado a Documentos (BSON/JSON).                                                                                                                                                                                             | Relacional (Tablas con filas y columnas).                 |
-> | **Esquema**              | Flexible y dinámico. No requiere una estructura fija.                                                                                                                                                                           | Rígido. Requiere definir tablas y relaciones de antemano. |
-> | **Sinergia con JS/TS**   | Muy alta. Los documentos se mapean nativamente a objetos.                                                                                                                                                                       | Buena, a través de ORMs que realizan la traducción.       |
+> | **Modelo de Datos** | Orientado a Documentos (BSON/JSON). | Relacional (Tablas con filas y columnas). |
+> | **Esquema** | Flexible y dinámico. No requiere una estructura fija. | Rígido. Requiere definir tablas y relaciones de antemano. |
+> | **Sinergia con JS/TS** | Muy alta. Los documentos se mapean nativamente a objetos. | Buena, a través de ORMs que realizan la traducción. |
 > | **Razón de la elección** | **Su modelo de datos es extremadamente intuitivo para un backend en Node.js. La flexibilidad del esquema es ideal para un proyecto en desarrollo donde los requisitos pueden evolucionar, permitiendo un desarrollo más ágil.** |
 
 ---

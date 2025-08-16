@@ -54,21 +54,22 @@ Se optó por un conjunto de herramientas específicas: **Tailwind CSS** y **Axio
 
 > **Librerías Frontend**
 >
-> | Criterio                 | **Tailwind CSS (✅ Elección)**                                                                                        | Bootstrap                                 |
-> | :----------------------- | :-------------------------------------------------------------------------------------------------------------------- | :---------------------------------------- |
-> | **Personalización**      | Máxima. Control total sobre el diseño.                                                                                | Limitada. Requiere sobreescribir estilos. |
+> **Estilos**
+> | Criterio | **![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) (✅ Elección)** | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white) |
+> | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+> | **Personalización** | Máxima. Control total sobre el diseño. | Limitada. Requiere sobreescribir estilos. |
 > | **Razón de la elección** | **Permite construir una interfaz de usuario completamente personalizada sin estar atado a componentes predefinidos.** |
 >
-> | Criterio                 | **Axios (✅ Elección)**                                                                                               | `fetch` API (Nativa)       |
-> | :----------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------------------------- |
-> | **Interceptores**        | Soportados. Ideal para inyectar tokens JWT.                                                                           | No soportados nativamente. |
+> **Comunicacion con Backend**
+> | Criterio | **![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white) (✅ Elección)** | ![Fetch API (Nativa)](https://img.shields.io/badge/Fetch_API-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+> | :----------------------- | :-------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+> | **Interceptores** | Soportados. Ideal para inyectar tokens JWT. | No soportados nativamente. |
 > | **Razón de la elección** | **Sus interceptores son perfectos para adjuntar automáticamente el token a las peticiones, simplificando la lógica.** |
 
 > **Librería de Validación (Backend)**
->
-> | Criterio                 | **Valibot (✅ Elección)**                                                                                                | Zod                                   |
+> | Criterio | **![Valibot](https://img.shields.io/badge/Valibot-2a9d8f?style=for-the-badge) (✅ Elección)** | ![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge) |
 > | :----------------------- | :----------------------------------------------------------------------------------------------------------------------- | :------------------------------------ |
-> | **Tamaño del Paquete**   | Muy pequeño. Optimizado para "tree-shaking".                                                                             | Pequeño, pero más grande que Valibot. |
+> | **Tamaño del Paquete** | Muy pequeño. Optimizado para "tree-shaking". | Pequeño, pero más grande que Valibot. |
 > | **Razón de la elección** | **Ofrece una API moderna y casi idéntica a Zod, pero con un impacto significativamente menor en el tamaño del paquete.** |
 
 ---
