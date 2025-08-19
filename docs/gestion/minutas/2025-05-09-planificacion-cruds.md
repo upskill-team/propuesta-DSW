@@ -10,7 +10,8 @@
 - Luca Trincavelli
 - Franco Zariaga
 
-**Etiquetas:** ![Gestión](https://img.shields.io/badge/GESTIÓN-fd7e14?style=for-the-badge) ![Próximos Pasos](https://img.shields.io/badge/PRÓXIMOS_PASOS-6f42c1?style=for-the-badge)
+**Etiquetas:** ![Gestión](https://img.shields.io/badge/GESTIÓN-fd7e14?style=for-the-badge) ![Próximos Pasos](https://img.shields.io/badge/PRÓXIMOS_PASOS-6f42c1?style=for-the-badge) ![Planificación](https://img.shields.io/badge/PLANIFICACIÓN-17a2b8?style=for-the-badge)
+![Backend](https://img.shields.io/badge/BACKEND-343a40?style=for-the-badge)
 
 ---
 
