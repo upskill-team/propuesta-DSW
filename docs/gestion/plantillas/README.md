@@ -8,7 +8,8 @@ Este directorio contiene las versiones de referencia de las plantillas que utili
 
 ---
 
-| Plantilla                                              | Propósito                                              |
-| :----------------------------------------------------- | :----------------------------------------------------- |
-| **[🚀 Nueva Funcionalidad](./nueva-funcionalidad.md)** | Para proponer nuevas ideas, mejoras o características. |
-| **[🐞 Reporte de Bug](./reporte-bug.md)**              | Para reportar un error o comportamiento inesperado.    |
+| Plantilla                                              | Propósito                                                    |
+| :----------------------------------------------------- | :----------------------------------------------------------- |
+| **[🚀 Nueva Funcionalidad](./nueva-funcionalidad.md)** | Para proponer nuevas ideas, mejoras o características.       |
+| **[🐞 Reporte de Bug](./reporte-bug.md)**              | Para reportar un error o comportamiento inesperado.          |
+| **[Pull Request](./nueva-pr.md)**                      | Descripción por defecto para todas las nuevas Pull Requests. |

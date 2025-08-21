@@ -10,9 +10,7 @@
 - Luca Trincavelli
 - Franco Zariaga
 
-**Etiquetas:** ![Gestión](https://img.shields.io/badge/GESTIÓN-fd7e14?style=for-the-badge) ![Técnico](https://img.shields.io/badge/TÉCNICO-007bff?style=for-the-badge) ![Decisión](https://img.shields.io/badge/DECISIÓN-28a745?style=for-the-badge)
-
----
+**Etiquetas:** ![Gestión](https://img.shields.io/badge/GESTIÓN-fd7e14?style=for-the-badge) ![Técnico](https://img.shields.io/badge/TÉCNICO-007bff?style=for-the-badge) ![Decisión](https://img.shields.io/badge/DECISIÓN-28a745?style=for-the-badge) ![Planificación](https://img.shields.io/badge/PLANIFICACIÓN-17a2b8?style=for-the-badge) ![UI/UX](https://img.shields.io/badge/UI/UX-e83e8c?style=for-the-badge) ![Frontend](https://img.shields.io/badge/FRONTEND-563d7c?style=for-the-badge)
 
 ## 📋 Agenda
 
@@ -64,6 +62,6 @@
 
 | Tarea                                                  | Responsable(s) | Fecha Límite |    Estado     |
 | :----------------------------------------------------- | :------------- | :----------: | :-----------: |
-| Archivar los proyectos Kanban personales antiguos      | Franco, Carlos |  2025-08-16  | ⏳ Pendiente  |
-| Comenzar a utilizar las nuevas plantillas de issues    | Todos          |  Inmediato   | ⏳ Pendiente  |
+| Archivar los proyectos Kanban personales antiguos      | Franco, Carlos |  2025-08-16  | ✅ Completado |
+| Comenzar a utilizar las nuevas plantillas de issues    | Todos          |  Inmediato   | ✅ Completado |
 | Actualizar el índice de minutas con esta nueva entrada | Nicolás        |  2025-08-15  | ✅ Completado |
