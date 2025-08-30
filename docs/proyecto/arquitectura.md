@@ -1,4 +1,4 @@
-> **[Portal de Documentación](../README.md)** / 🏗️ Arquitectura de la Aplicación
+> **[Portal de Documentación](../README.md)** / 🏗️ Modelo
 
 # 🏗️ Arquitectura de la Aplicación
 

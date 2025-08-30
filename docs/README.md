@@ -14,6 +14,7 @@ Estos documentos definen la visión, el alcance y la estructura de alto nivel de
 | Documento | Descripción |
 | :--- | :--- |
 | **[🎯 Propuesta del Proyecto](./proyecto/proposal.md)** | Define el objetivo, el alcance y los requisitos funcionales y técnicos del proyecto. |
+|**[🏗️ Modelo actualizado](./proyecto/model.md)**| Ofrece una visión acerca del modelo (ERD) actual del proyecto. |
 | **[🏗️ Arquitectura](./proyecto/arquitectura.md)** | Ofrece una visión general de la arquitectura, tecnologías y decisiones de diseño. |
 
 ---
@@ -26,6 +27,7 @@ Información detallada para desarrolladores sobre el frontend, el backend y la A
 | **[🚀 Documentación de la API](./api/README.md)** | Punto de entrada a la documentación de la API, incluyendo endpoints y seguridad. |
 | **[⚙️ Documentación del Backend](./work-in-progress.md)** | Guías de instalación, configuración y tests específicos del servidor. |
 | **[🎨 Documentación del Frontend](./work-in-progress.md)** | Guías de instalación, estructura de componentes y tests de la interfaz de usuario. |
+|**[📝 Documentación de librerias usadas](./gestion/eleccion-de-librerias/README.md)**| Comparativas entre distintas librerias consideradas para el proyecto. |
 
 ---
 
