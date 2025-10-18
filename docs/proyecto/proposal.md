@@ -22,11 +22,15 @@
 
 Desarrollaremos una plataforma de aprendizaje virtual. La solución consistirá en una página web con acceso a cursos donde los estudiantes podrán acceder, examinar recursos y realizar actividades. Estos cursos podrán ser gratuitos o pagos, depende como lo prefiera el instructor.
 
-### Modelo
+### Modelo Inicial
 
 ![Proposal MD](https://github.com/user-attachments/assets/90899d01-8de4-4a2d-a44d-42ed2b67a1f7)
 
 [link del modelo](https://drive.google.com/file/d/1le9JNA73D_ulgn7CgIJh6w_V4lcplNSn/view?usp=sharing)
+
+### Modelo Actual
+
+[link al modelo actual](./model.md)
 
 ## Alcance Funcional
 
