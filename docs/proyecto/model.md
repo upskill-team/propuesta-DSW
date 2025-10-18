@@ -21,7 +21,7 @@ El siguiente diagrama de Entidad-Relación (ERD) muestra el modelo de datos actu
 erDiagram
 
     %% ==================================
-    %% --- 1. NÚCLEO: USUARIOS Y PERFILES ---
+    %% --- 1. CORE: USERS & PROFILES ---
     %% ==================================
     User {
         string id PK
@@ -29,43 +29,49 @@ erDiagram
         string surname
         string mail "unique"
         string password "hidden"
-        UserRole role
+        UserRole role "Enum: admin, professor, student"
         string profile_picture "nullable"
-        string resetPasswordToken "nullable"
-        datetime resetPasswordExpires "nullable"
+        string phone "nullable"
+        string location "nullable"
+        date birthdate "nullable"
+        string resetPasswordToken "nullable, hidden"
+        datetime resetPasswordExpires "nullable, hidden"
     }
 
     Student {
         string id PK
-        string userId FK "unique"
     }
 
     Professor {
         string id PK
-        string userId FK "unique"
-        string state
-        string mercadoPagoAccountId "nullable"
-        string institutionId FK "nullable"
+        string state "e.g., pending, active"
     }
 
     Institution {
         string id PK
-        string name "unique"
+        string name
         string description
+        string normalizedName "unique"
+        string[] aliases "nullable"
     }
 
     Appeal {
         string id PK
-        string userId FK
         datetime date
-        string state
+        string state "'pending', 'accepted', 'rejected'"
         string expertise
         string experienceMotivation
         string documentUrl "nullable"
     }
 
+    JoinRequest {
+        string id PK
+        datetime requestDate
+        JoinRequestStatus status "Enum: pending, accepted, rejected"
+    }
+
     %% =====================================
-    %% --- 2. CONTENIDO PEDAGÓGICO Y CURSOS ---
+    %% --- 2. COURSES & EDUCATIONAL CONTENT ---
     %% =====================================
     CourseType {
         string id PK
@@ -78,120 +84,148 @@ erDiagram
         string name
         string description
         boolean isFree
-        float price "nullable"
-        string courseTypeId FK
-        string professorId FK
+        int priceInCents "nullable, integer to avoid float issues"
+        status status "Enum: en-desarrollo, publicado, etc."
+        string imageUrl "nullable"
     }
 
     Question {
         string id PK
-        string courseId FK
         string questionText
-        QuestionType type
-        json payload "Stores options and correct answer"
+        QuestionType questionType "Enum: MultipleChoiceOption"
+        json payload "Stores options and correctAnswer"
+        int unitNumber "nullable, links to embedded Unit"
+        int points
     }
 
-
     %% =====================================
-    %% --- 3. SISTEMA DE EVALUACIONES ---
+    %% --- 3. ASSESSMENT SYSTEM ---
     %% =====================================
     Assessment {
         string id PK
-        string courseId FK
         string title
-        string description
-        datetime startDate
-        datetime endDate
+        string description "nullable"
+        int durationMinutes "nullable"
+        int passingScore
+        int maxAttempts "nullable"
+        boolean isActive
+        datetime availableFrom "nullable"
+        datetime availableUntil "nullable"
     }
 
     AssessmentAttempt {
         string id PK
-        string studentId FK
-        string assessmentId FK
+        AttemptStatus status "Enum: in_progress, submitted"
+        datetime startedAt
+        datetime submittedAt "nullable"
         float score "nullable"
-        string status
-        datetime submittedAt
+        boolean passed "nullable"
+        int attemptNumber
     }
 
     AttemptAnswer {
         string id PK
-        string attemptId FK
-        string questionId FK
-        json studentResponse "Stores the student's answer"
+        json answer "string | number | string[]"
+        boolean isCorrect
+        datetime answeredAt
     }
 
+    %% =====================================
+    %% --- 4. ENROLLMENT & FINANCIAL FLOW ---
+    %% =====================================
+    Enrollement {
+        string id PK "Unique constraint on (student, course)"
+        datetime enrolledAt
+        EnrollmentState state "Enum: enrolled, completed, dropped"
+        int grade "nullable"
+        int progress "nullable"
+        int[] completedUnits
+    }
 
-    %% =====================================
-    %% --- 4. FLUJO FINANCIERO Y MATRÍCULAS ---
-    %% =====================================
     Payment {
         string id PK
-        string studentId FK
-        string courseId FK
-        float amount
-        string currency
-        string status
-        string externalPaymentId
-        datetime paymentDate
-    }
-
-    Enrollment {
-        string id PK
-        string studentId FK
-        string courseId FK
-        string paymentId FK "unique"
-        datetime enrollmentDate
-        string status
+        string mercadoPagoId
+        int amountInCents
+        PaymentStatus status "Enum: pending, approved, rejected, etc."
+        datetime paidAt
+        json metadata "nullable"
     }
 
     Earning {
         string id PK
-        string paymentId FK
-        string professorId FK
-        float amount
-        string type "'PROFESSOR_SHARE' or 'PLATFORM_FEE'"
-        datetime earningDate
+        EarningType type "Enum: professor_share, platform_fee"
+        int amountInCents
+        EarningStatus status "Enum: pending, processed, paid_out"
+        datetime createdAt
+        datetime processedAt "nullable"
     }
 
-    Payout {
-        string id PK
-        string professorId FK
-        float amount
-        string status
-        datetime payoutDate
+    %% =====================================
+    %% --- 5. EMBEDDABLE & SUPPORTING ENTITIES ---
+    %% =====================================
+    %% Embeddable entities
+    Unit {
+        %% (Embeddable)
+        int unitNumber
+        string name
+        string description
+        string detail
+        ObjectId[] questions "References Question IDs"
     }
+
+    Material {
+        %% (Embeddable)
+        string title
+        string url
+    }
+
+    InstitutionCourse {
+        %% (Embeddable)
+        string name
+        string[] aliases "nullable"
+    }
+
 
 
     %% =====================================
-    %% --- DEFINICIÓN DE RELACIONES ---
+    %% --- RELATIONSHIP DEFINITIONS ---
     %% =====================================
 
-    %% Relaciones de Perfiles
-    User ||--o{ Student : "has profile"
-    User ||--o{ Professor : "has profile"
+    
+    %% Core Relationships
+    User ||--o| Student : "has"
+    User ||--o| Professor : "has"
     User ||--o{ Appeal : "submits"
-    Institution }o--|| Professor : "is affiliated with"
+    Professor ||--o{ JoinRequest : "sends"
+    Institution ||--o{ JoinRequest : "receives"
+    Institution }o--|| Professor : "is member of"
+    Professor |o--o| Institution : "manages"
 
-    %% Relaciones de Contenido y Cursos
-    Professor ||--|{ Course : "teaches"
+    %% Course Content Relationships
+    Professor ||--|{ Course : "creates"
     CourseType ||--|{ Course : "categorizes"
-    Course ||--|{ Question : "has question bank"
-    Course ||--|{ Assessment : "has"
+    Course ||--|{ Question : "owns"
+    Course ||--o{ Assessment : "has"
 
-    %% Relaciones del Sistema de Evaluaciones
+    %% Assessment System Relationships
     Assessment }o--o{ Question : "is composed of"
-    Student }o--|| AssessmentAttempt : "takes"
+    Student ||--o{ AssessmentAttempt : "takes"
     Assessment ||--o{ AssessmentAttempt : "has"
     AssessmentAttempt ||--|{ AttemptAnswer : "contains"
-    Question ||--o{ AttemptAnswer : "is answered in"
+    Question ||--o{ AttemptAnswer : "is for"
 
-    %% Relaciones del Flujo Financiero
-    Student }o--|| Payment : "initiates"
-    Course ||--o{ Payment : "is purchased via"
-    Payment ||--|| Enrollment : "results in"
-    Student }o--|| Enrollment : "is enrolled in"
-    Course ||--o{ Enrollment : "has"
+    %% Enrollment & Financial Relationships
+    Student ||--o{ Enrollement : "has"
+    Course ||--o{ Enrollement : "has"
+    Student ||--o{ Payment : "makes"
+    Course ||--o{ Payment : "is for"
+    Payment ||--o| Enrollement : "results in"
     Payment ||--o{ Earning : "generates"
     Professor ||--o{ Earning : "receives"
-    Professor ||--o{ Payout : "requests"
+
+    %% Embeddable Relationships (conceptual only)
+    Course ||--o{ Unit : "contains (embedded)"
+    Unit ||--o{ Material : "contains (embedded)"
+    Unit }o--o{ Question : "references"
+    Course ||--o{ InstitutionCourse : "offered by (embedded)"
 ```
