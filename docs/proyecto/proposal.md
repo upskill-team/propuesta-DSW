@@ -13,8 +13,8 @@
 
 ### Repositorios
 
-- [frontend app](https://github.com/carlex74/Front-End-DSW)
-- [backend app](https://github.com/carlex74/Back-End-DSW)
+- [frontend app](https://github.com/upskill-team/Front-End-DSW)
+- [backend app](https://github.com/upskill-team/Back-End-DSW)
 
 ## Tema
 
