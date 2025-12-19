@@ -17,6 +17,7 @@ Las entidades se organizan en cuatro dominios funcionales clave:
 
 El siguiente diagrama de Entidad-Relación (ERD) muestra el modelo de datos actual del sistema, incluyendo los atributos y las relaciones que existen entre las distintas entidades.
 
+
 ```mermaid
 erDiagram
 
