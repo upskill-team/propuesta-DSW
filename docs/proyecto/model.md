@@ -17,6 +17,7 @@ Las entidades se organizan en cuatro dominios funcionales clave:
 
 El siguiente diagrama de Entidad-Relación (ERD) muestra el modelo de datos actual del sistema, incluyendo los atributos y las relaciones que existen entre las distintas entidades.
 
+
 ```mermaid
 erDiagram
 
@@ -89,13 +90,14 @@ erDiagram
         string imageUrl "nullable"
     }
 
+    %% --- Entidad Question ACTUALIZADA ---
     Question {
         string id PK
         string questionText
         QuestionType questionType "Enum: MultipleChoiceOption"
         json payload "Stores options and correctAnswer"
-        int unitNumber "nullable, links to embedded Unit"
-        int points
+        int unitNumber "nullable"
+        int points "default 10"
     }
 
     %% =====================================
@@ -135,10 +137,11 @@ erDiagram
     %% =====================================
     Enrollement {
         string id PK "Unique constraint on (student, course)"
-        datetime enrolledAt
+        date createdAt "nullable"
+        date enrolledAt
         EnrollmentState state "Enum: enrolled, completed, dropped"
         int grade "nullable"
-        int progress "nullable"
+        int progress "nullable, default 0"
         int[] completedUnits
     }
 
@@ -147,7 +150,8 @@ erDiagram
         string mercadoPagoId
         int amountInCents
         PaymentStatus status "Enum: pending, approved, rejected, etc."
-        datetime paidAt
+        date createdAt "nullable"
+        date paidAt
         json metadata "nullable"
     }
 
@@ -219,7 +223,7 @@ erDiagram
     Course ||--o{ Enrollement : "has"
     Student ||--o{ Payment : "makes"
     Course ||--o{ Payment : "is for"
-    Payment ||--o| Enrollement : "results in"
+    Payment |o--|| Enrollement : "results in (optional)"
     Payment ||--o{ Earning : "generates"
     Professor ||--o{ Earning : "receives"
 
