@@ -1,8 +1,6 @@
-## 📊 Resumen de Actividad
-El equipo ha mantenido un flujo de trabajo constante siguiendo la metodología Gitflow.
+> **[Portal de Documentación](../../README.md)** / **[Gestión del Proyecto](../README.md)** / 📋 Listado de PRs - Front End
 
-- **Total de PRs mergeados:** +135
-- **Commits totales:** +205
+La lista completa de Pull Requests se puede ver acá: https://github.com/upskill-team/Front-End-DSW/pulls?q=is%3Apr+is%3Aclosed
 
 ## 🏆 Hitos Técnicos Principales (Highlights)
 
