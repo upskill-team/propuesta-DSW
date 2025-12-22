@@ -79,6 +79,35 @@ Este repositorio central es el núcleo de **UpSkill**, pero el desarrollo se dis
 
 ---
 
+## Estructura del Repositorio
+
+```
+propuesta-DSW/
+├── README.md
+├── docs/
+│   ├── README.md
+│   ├── backend-setup.md
+│   ├── frontend-setup.md
+│   ├── work-in-progress.md
+│   ├── api/
+│   │   ├── endPoints.md
+│   │   ├── formatoRespuesta.md
+│   │   └── seguridad.md
+│   ├── gestion/
+│   │   ├── reglas-de-trabajo.md
+│   │   ├── estandares/
+│   │   ├── eleccion-de-librerias/
+│   │   ├── listado-de-pr/
+│   │   ├── minutas/
+│   │   └── plantillas/
+│   └── proyecto/
+│       ├── arquitectura.md
+│       ├── model.md
+│       └── proposal.md
+```
+
+---
+
 ## 👥 Nuestro Equipo
 
 Este proyecto es el resultado del esfuerzo colaborativo de nuestro equipo.
