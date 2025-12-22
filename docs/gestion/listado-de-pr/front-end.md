@@ -13,10 +13,9 @@ A continuación, los cambios más significativos del desarrollo:
 - **Administración y Gestión:** Panel integral para la administración de la plataforma, incluyendo la gestión de tipos de curso, instituciones y un visor de documentos para validación de credenciales ([PR #52](https://github.com/upskill-team/Front-End-DSW/pull/52), [PR #60](https://github.com/upskill-team/Front-End-DSW/pull/60), [PR #129](https://github.com/upskill-team/Front-End-DSW/pull/129), [PR #54](https://github.com/upskill-team/Front-End-DSW/pull/54))
 - **Gestión Académica (LMS):** Dashboard dedicado para profesores y flujo completo para la creación, edición y publicación de contenido educativo y cursos ([PR #58](https://github.com/upskill-team/Front-End-DSW/pull/58), [PR #101](https://github.com/upskill-team/Front-End-DSW/pull/101))
 - **Sistema de Evaluaciones:** Módulo completo para la creación de exámenes por parte de los docentes y la resolución de los mismos por parte de los estudiantes ([PR #135](https://github.com/upskill-team/Front-End-DSW/pull/135))
-- **Pagos y Checkout:** Implementación del proceso de compra de cursos, integración con pasarela de pagos y experiencia de usuario post-compra ([PR #134](https://github.com/upskill-team/Front-End-DSW/pull/134))
+- **Pagos y Checkout:** Implementación de pasarela de pagos([PR #134](https://github.com/upskill-team/Front-End-DSW/pull/134))
 - **Cuenta y Seguridad:** Gestión de perfil de usuario, recuperación de credenciales y manejo avanzado de sesiones y persistencia de autenticación ([PR #121](https://github.com/upskill-team/Front-End-DSW/pull/121), [PR #70](https://github.com/upskill-team/Front-End-DSW/pull/70), [PR #156](https://github.com/upskill-team/Front-End-DSW/pull/156), [PR #174](https://github.com/upskill-team/Front-End-DSW/pull/174))
-- **Comunicación y Notificaciones:** Centro de notificaciones en plataforma e infraestructura para comunicaciones por correo electrónico ([PR #150](https://github.com/upskill-team/Front-End-DSW/pull/150), [PR #152](https://github.com/upskill-team/Front-End-DSW/pull/152))
-- **Experiencia de Usuario (UI/UX):** Diseño responsivo (adaptable a móviles), sistema de feedback visual interactivo y herramientas avanzadas de filtrado y paginación de datos ([PR #44](https://github.com/upskill-team/Front-End-DSW/pull/44), [PR #149](https://github.com/upskill-team/Front-End-DSW/pull/149), [PR #142](https://github.com/upskill-team/Front-End-DSW/pull/142), [PR #147](https://github.com/upskill-team/Front-End-DSW/pull/147))
+- **Experiencia de Usuario (UI/UX):** Diseño responsivo (adaptable a móviles), sistema de feedback visual interactivo y herramientas de filtrado y paginación de datos ([PR #44](https://github.com/upskill-team/Front-End-DSW/pull/44), [PR #149](https://github.com/upskill-team/Front-End-DSW/pull/149), [PR #142](https://github.com/upskill-team/Front-End-DSW/pull/142), [PR #147](https://github.com/upskill-team/Front-End-DSW/pull/147))
 - **Calidad de Software (QA):** Configuración e implementación de suite de pruebas automatizadas (unitarias y de extremo a extremo) ([PR #148](https://github.com/upskill-team/Front-End-DSW/pull/148))
 
 
@@ -27,10 +26,8 @@ A continuación, los cambios más significativos del desarrollo:
 - **Panel de Administración:** Corrección de problemas de responsividad y consistencia visual en layouts administrativos ([PR #69](https://github.com/upskill-team/Front-End-DSW/pull/69))
 - **Componentes:** Solución a bugs lógicos y de vinculación en las tarjetas de cursos ([PR #136](https://github.com/upskill-team/Front-End-DSW/pull/136))
 - **Lógica de Evaluaciones y Persistencia:** Solución a bucles infinitos en el flujo de evaluaciones y mejoras en el guardado de datos del editor ([PR #180](https://github.com/upskill-team/Front-End-DSW/pull/180))
-- **Infraestructura y Routing:** Configuración de reglas de reescritura (rewrites) para garantizar el correcto enrutamiento de la SPA en producción ([PR #168](https://github.com/upskill-team/Front-End-DSW/pull/168))
-- **Lógica de Negocio (Intentos):** Corrección en el sistema de registro y validación de intentos en las unidades de aprendizaje ([PR #185](https://github.com/upskill-team/Front-End-DSW/pull/185))
+- **Infraestructura y Routing:** Solución de error al refrescar paginas  en producción ([PR #168](https://github.com/upskill-team/Front-End-DSW/pull/168))
 - **Componentes y Gráficos:** Arreglos en el visor de documentos y en la renderización de gráficos del panel administrativo ([PR #199](https://github.com/upskill-team/Front-End-DSW/pull/199))
-- **CI/CD y Despliegue:** Resolución de conflictos críticos en el proceso de construcción (build) para el despliegue ([PR #161](https://github.com/upskill-team/Front-End-DSW/pull/161))
 
 ### 🛠 Mantenimiento y Otros (Chores/Refactors)
 
