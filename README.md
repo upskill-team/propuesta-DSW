@@ -106,6 +106,9 @@ propuesta-DSW/
 │       └── proposal.md
 ```
 
+**Enlaces rápidos:**
+- [Documentación](docs/README.md) | [API](docs/api/README.md) | [Gestión](docs/gestion/README.md) | [Arquitectura](docs/proyecto/arquitectura.md) | [Modelo de datos](docs/proyecto/model.md)
+
 ---
 
 ## 👥 Nuestro Equipo
