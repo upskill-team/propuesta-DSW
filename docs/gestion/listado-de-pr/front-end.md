@@ -34,14 +34,6 @@ A continuación, los cambios más significativos del desarrollo:
 
 ### 🛠 Mantenimiento y Otros (Chores/Refactors)
 
-¡Excelente selección! Esa lista está muy bien redactada: es precisa, técnica y menciona las tecnologías clave (TanStack Query, React Hook Form) que suman muchos puntos en una evaluación técnica.
-
-Solo le haría un pequeño ajuste al **título de la sección** para que suene más proactivo ("Optimización" en lugar de "Otros") y mantendría el formato consistente con las secciones anteriores.
-
-Aquí tienes la versión final lista para tu proposal del **Frontend**:
-
-### 🛠 Mantenimiento y Optimización (Chores/Refactors Frontend)
-
 - **Gestión de Estado y Formularios:** Migración completa de la arquitectura de estado del servidor a **TanStack Query** y estandarización del manejo de formularios con **React Hook Form** y **Valibot** para mejorar rendimiento y validación ([PR #74](https://github.com/upskill-team/Front-End-DSW/pull/74), [PR #75](https://github.com/upskill-team/Front-End-DSW/pull/75))
 - **Seguridad en el Cliente:** Fortalecimiento de la seguridad en la navegación externa y en el visor de documentos integrado ([PR #196](https://github.com/upskill-team/Front-End-DSW/pull/196))
 - **Rendimiento (Lazy Loading):** Implementación de carga diferida en el enrutador principal y secciones críticas para reducir el tiempo de carga inicial (FCP) ([PR #155](https://github.com/upskill-team/Front-End-DSW/pull/155))
