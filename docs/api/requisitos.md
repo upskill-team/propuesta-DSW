@@ -1,7 +1,0 @@
-# Requisitos
-
-
-## Ideas originales
-
-
-## Modificaciones

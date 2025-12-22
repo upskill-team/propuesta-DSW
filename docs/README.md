@@ -47,4 +47,4 @@ Enlaces e información necesaria para la evaluación final del proyecto.
 | Documento | Descripción |
 | :--- | :--- |
 | **[✅ Información de Entrega Final](./work-in-progress.md)** | Centraliza links de despliegue, credenciales y evidencia para la defensa. |
-| **[▶️ Demo de la Aplicación (Video)](./work-in-progress.md)** | Enlace a la demostración en video del funcionamiento del sistema. |
+| **[▶️ Demo de la Aplicación (Video)](https://youtu.be/OTLbJmjw4Js?si=Pm-G73h54bu7eoDX)** | Enlace a la demostración en video del funcionamiento del sistema. |

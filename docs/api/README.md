@@ -1,42 +1,77 @@
-> **[Portal de Documentación](../README.md)** / 🚀 Documentación de la API
+> **[Portal de Documentación](../README.md)** / Documentación de la API
 
-# 🚀 Documentación de la API de UpSkill
+# Documentación de la API de UpSkill
 
-Bienvenido a la documentación técnica de la API de UpSkill. Esta guía está diseñada para desarrolladores que necesiten interactuar con nuestro backend, ya sea para consumir datos desde el frontend o para integraciones de terceros.
+## Documentación Interactiva (Swagger)
+
+La forma más completa de explorar la API es a través de **Swagger UI**, que proporciona documentación interactiva con todos los endpoints, esquemas y la posibilidad de probar las peticiones directamente.
+
+### Acceso en Desarrollo
+
+1. Inicia el servidor backend:
+   ```bash
+   npm run dev
+   ```
+
+2. Accede a la documentación en:
+   ```
+   http://localhost:3000/api-docs
+   ```
+
+La interfaz de Swagger permite:
+- Explorar todos los endpoints organizados por módulos
+- Ver los esquemas completos de petición y respuesta
+- Probar endpoints directamente desde el navegador
+- Revisar los códigos de estado y errores posibles
 
 ---
 
-### 🏛️ Principios de Diseño
+## Principios de Diseño
 
 Nuestra API se adhiere a los siguientes estándares para garantizar la consistencia, previsibilidad y seguridad:
 
 | Principio                 | Descripción                                                                                                                                            |
 | :------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Arquitectura RESTful**  | Utilizamos los métodos HTTP estándar (`GET`, `POST`, `PATCH`, `DELETE`) para interactuar con los recursos de una manera predecible.                    |
-| **Formato JSON**          | Todas las respuestas de la API, tanto para solicitudes exitosas como para errores, se devuelven en formato `application/json`.                         |
-| **Autenticación con JWT** | Las rutas protegidas requieren un JSON Web Token (JWT) válido en el encabezado `Authorization` para verificar la identidad y los permisos del usuario. |
+| **Arquitectura RESTful**  | Métodos HTTP estándar (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`) para interactuar con los recursos                                                      |
+| **Formato JSON**          | Todas las respuestas en formato `application/json` con estructura consistente                                                                           |
+| **Autenticación JWT**     | Rutas protegidas mediante JSON Web Token en el header `Authorization`                                                                                   |
+| **Documentación OpenAPI** | Especificación completa siguiendo el estándar OpenAPI/Swagger                                                                                           |
 
 ---
 
-### 📦 Recursos Principales
+## Recursos Principales
 
-La API proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar las siguientes entidades de negocio:
+La API proporciona operaciones CRUD para gestionar las siguientes entidades:
 
-- **📚 Cursos**
-- **👤 Usuarios** (Alumnos e Instructores)
-- **🎓 Tipos de Cursos**
-- **🏫 Instituciones**
-- ... y más.
+- **Autenticación** - Registro, login, tokens y recuperación de contraseña
+- **Usuarios** - Perfiles de alumnos, profesores y administradores
+- **Cursos** - Gestión completa de cursos, unidades y materiales
+- **Tipos de Curso** - Categorización de cursos
+- **Instituciones** - Administración de instituciones educativas
+- **Inscripciones** - Inscripción y seguimiento de progreso
+- **Profesores** - Perfiles y cursos creados
+- **Estudiantes** - Perfiles y cursos inscritos
+- **Evaluaciones** - Cuestionarios y seguimiento de intentos
+- **Solicitudes (Appeals)** - Peticiones para convertirse en profesor
+- **Pagos** - Procesamiento de pagos para cursos premium
+- **Contacto** - Mensajes de contacto
+- **Solicitudes de Unión** - Peticiones para unirse a instituciones
 
 ---
 
-### 🗺️ Índice de la Documentación de la API
+## Índice de Documentación
 
-Utiliza la siguiente tabla para navegar a las secciones específicas de esta documentación.
+| Documento                                    | Descripción                                                                     |
+| :------------------------------------------- | :------------------------------------------------------------------------------ |
+| **[Endpoints](./endPoints.md)**              | Lista completa de endpoints organizados por módulos                             |
+| **[Formato de Respuesta](./formatoRespuesta.md)** | Estructura de respuestas JSON para operaciones exitosas y errores          |
+| **[Seguridad](./seguridad.md)**              | Autenticación JWT, protección de rutas y validación                             |
 
-| Documento                                            | Descripción                                                                                 |
-| :--------------------------------------------------- | :------------------------------------------------------------------------------------------ |
-| **[🔗 Endpoints](./endPoints.md)**                   | Detalle de todos los endpoints disponibles, incluyendo métodos HTTP, parámetros y ejemplos. |
-| **[📦 Formato de Respuesta](./formatoRespuesta.md)** | Explica la estructura estándar de las respuestas JSON para operaciones exitosas y de error. |
-| **[🛡️ Seguridad y Autenticación](./seguridad.md)**   | Detalles sobre la implementación de la autenticación con JWT y la protección de rutas.      |
-| **[📋 Requisitos](./requisitos.md)**                 | Requisitos funcionales y técnicos que la API debe cumplir según las especificaciones.       |
+---
+
+## URL Base
+
+Todos los endpoints están prefijados con `/api`:
+
+- **Desarrollo**: `http://localhost:3000/api`
+- **Producción**: *(Por definir al momento del despliegue)*
